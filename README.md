@@ -6,7 +6,7 @@ AD information gathering scripts and command
 . .\powerview.ps1
 ```
 
-### Enumeracion SAM
+### Enumeración SAM
 #### Grupos Locales
 ```
 Get-NetLocalGroup
@@ -24,7 +24,7 @@ Get-NetSession
 ```
 
 ### Enumeración NTDS
-#### Informacion del dominio
+#### Información del dominio
 ```
 Get-NetDomain
 Get-DomainPolicy
@@ -60,7 +60,7 @@ Find-DomainShare
 Get-NetOU
 ```
 
-#### Politicas de dominio
+#### Políticas de dominio
 ```
 Get-NetGPO
 Get-NetGPO | Select displayname
@@ -73,7 +73,7 @@ Get-ObjectAcl
 Get-ObjectAcl -SamAccountName XXXX
 ```
 
-#### Informacion del bosque
+#### Información del bosque
 ```
 Get-NetForestDomain
 ```
@@ -87,7 +87,7 @@ Invoke-UserHunter -GroupName "RDPUsers"
 
 ## AD
 
-### Enumeracion SAM
+### Enumeración SAM
 #### Grupos Locales
 ```
 Get-LocalGroup | Select Name, objectclass, Principalsource, sid
@@ -95,7 +95,7 @@ Get-LocalGroupMember -Group 'XXXX'
 Invoke-Command -ScriptBlock { Get-LocalGroupMember -Group 'XXXX' } -ComputerName XXX --> Solo con permisos de admin
 ```
 
-### Enumeracion NTDS
+### Enumeración NTDS
 #### Informacion del dominio
 ```
 Get-ADDomain
